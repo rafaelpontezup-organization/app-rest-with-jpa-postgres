@@ -1,0 +1,46 @@
+schema-version: v2
+kind: manifest
+metadata:
+  name: app-rest-with-jpa-postgres
+  description: app-rest-with-jpa-postgres
+  starter: coffee-studio/java-springboot-restapi-stack@2.1.0/rest-api-with-spring-data-jpa
+  stack-version-id: 01HAZHJ0SEVHGYNN3ZT114YQXK
+  stack: java-springboot-restapi-stack@2.1.0
+spec:
+  type: app
+  app-id: 01HAZKDH2KY717HGHFD7DVQ4B7
+  plugins:
+    - name: coffee-studio/java-springboot-restapi-stack@2.1.0/java-springboot-restapi-base-plugin@1.0.0
+      alias: java-springboot-restapi-base-plugin-1695425124193
+      plugin-version-id: 01HAZGK0TTT2D2S4P7BC7E5TV3
+      stack-version-id: 01HAZHJ0SEVHGYNN3ZT114YQXK
+      type: app
+      inputs:
+        project_name: app-rest-with-jpa-postgres
+        project_description: Simple REST API application with Java and Spring Boot
+        project_springboot_version: 2.7.2
+        project_group_id: br.com.zup.edu
+        project_artifact_id: app-rest-with-jpa-postgres
+        project_version: 0.0.1-SNAPSHOT
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+    - name: coffee-studio/java-springboot-restapi-stack@2.1.0/java-spring-data-jpa-plugin@1.0.0
+      alias: java-spring-data-jpa-plugin-1695425124207
+      plugin-version-id: 01HAZH26J1J0MCPJHX3N1GNG5J
+      stack-version-id: 01HAZHJ0SEVHGYNN3ZT114YQXK
+      type: app
+      inputs:
+        database_name: PostgreSQL
+      inputs-envs: {}
+      connections:
+        generates: []
+        requires: []
+      links:
+        generates: []
+  global-inputs: {}
+  global-computed-inputs: {}
+  repository: https://github.com/rafaelpontezup-organization/app-rest-with-jpa-postgres
